@@ -18,10 +18,6 @@ A YouTube homepage clone built using **HTML & CSS (Flexbox, Grid, Positioning)**
 # 🚀 Click On The Link To See Output 🎥 :
 - [Click Here](https://rohan-naroni.github.io/Youtube/)
 
-## Clone the Repository  
+## 📥 Clone the Repository  
 git clone https://github.com/Rohan-Naroni/Youtube.git
-
-# CLick On The Link To See Output :
-* [Click Here](https://rohan-naroni.github.io/Youtube/)
-
 
