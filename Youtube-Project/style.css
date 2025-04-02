@@ -14,7 +14,13 @@ html,body{
 
 
     body {
-        padding-top: 80px; /* Should match the navbar height */
+        /* padding-top: 80px;  */
+        padding-top: 90px;
+        padding-left: 110px;
+        padding-right: 15px;
+        background-color: rgba(224, 224, 224, 0.507);
+        
+
     }
     
 
@@ -24,10 +30,12 @@ html,body{
 .flex-container{
     background-color: white;
     display: flex;
-    height: 60px;
-    margin-bottom: 20px;
-    padding-bottom: 30px;
-    padding-top: 30px;
+    /* flex-wrap: wrap; */
+    height: auto;
+    margin-bottom: 17px;
+    padding-bottom: 10px;
+    padding-top: 12px;
+
     justify-content: space-between;
     /* border-bottom: 1px solid black; */
 
@@ -35,6 +43,7 @@ html,body{
     left: 0;
     right: 0;
     top: 0;
+    z-index: 1000;
     
 }
 
@@ -55,10 +64,12 @@ html,body{
     height :24px;
     margin-right: 24px;
     margin-left: 24px;
+    cursor: pointer;
 }
 
 .youtubelogo{
     height: 24px;
+    cursor: pointer;
 }
 
 
@@ -71,7 +82,7 @@ html,body{
     margin-right: 50px;
     max-width: 680px;
     /* min-width: 200px; */
-    min-width: 300px;  /* Prevents search section from shrinking too much */
+    min-width: 120px;  /* Prevents search section from shrinking too much */
 
     align-items: center;
     
@@ -81,8 +92,8 @@ html,body{
 
 .searchbox{
     flex: 1;
-    max-width: 700px;
-    min-width: 150px;  /* Prevents input from shrinking too much */
+    max-width: 690px;
+    min-width: 10px;  /* Prevents input from shrinking too much */
     height: 40px;
     /* border-radius: 50px; */
     border-top-left-radius: 50px;
@@ -93,7 +104,7 @@ html,body{
     outline: none;
     font-size: 16px;
     padding-left: 13px;
-    background-color: rgba(128, 128, 128, 0.238);
+    background-color: rgba(203, 203, 203, 0.238);
     box-shadow: inset 1px 2px 3px rgba(128, 128, 128, 0.238);
     
 }
@@ -112,7 +123,7 @@ html,body{
     height:40px;
     width: 60px;
     display: flex;
-    background-color: rgba(128, 128, 128, 0.515);
+    background-color: rgba(209, 209, 209, 0.515);
     border-width: 1px;
     border-style:  solid;
     border-color: grey;
@@ -123,38 +134,82 @@ html,body{
     margin-left: -1px;
     flex-shrink: 0; /* Prevent shrinking */
 
-
-
-
+    position: relative;
 }
+
+
+.searchtooltip{
+    position: absolute;
+    right: -18px;
+    bottom: -24px;
+    background-color: grey;
+    color: white;
+    padding: 5px;
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    
+}
+
+.search-btn:hover .searchtooltip{
+    opacity: 1;
+}
+
+
 
 
 .voice-search-btn{
     margin-left: 20px;
-    height:40px;
-    width: 40px;
+    height:38px;
+    width: 38px;
     display: flex;
-    background-color: rgba(128, 128, 128, 0.515);
+    background-color: rgba(209, 209, 209, 0.515);
     border-width: 1px;
     border-style:  solid;
     border-color: grey;
     align-items: center;
     border-radius: 50px;
     flex-shrink: 0; /* Prevent shrinking */
+    position: relative;
+}
 
-    
+
+.voicetooltip{
+    position: absolute;
+    width: 145px;
+    right: -120px;
+    bottom: -26px;
+    background-color: grey;
+    color: white;
+    border-radius: 2px;
+    padding: 5px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    font-size: 12px;
 
 }
+
+.voice-search-btn:hover .voicetooltip{
+    opacity: 1;
+}
+
+
+
+
 
 .search-icon{
 width: 100%;
 height: 25px;
+cursor: pointer;
 }
 
 
 .mic-icon{
     width: 100%;
     height: 25px;
+    cursor: pointer;
 }
 
 
@@ -171,21 +226,152 @@ height: 25px;
 
 .create{
     height: 30px;
+    cursor: pointer;
     
 }
 
+
+.create-tooltip{
+    position: relative;
+}
+
+.createtooltip{
+
+    position: absolute;
+    right: -30px;
+    bottom: -28px;
+    background-color: grey;
+    color: white;
+    border-radius: 2px;
+    padding: 5px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    font-size: 12px;
+
+}
+
+
+.create-tooltip:hover .createtooltip{
+    opacity: 1;
+}
+
+
+
 .user-profile{
-    height: 30px;
+    height: 36px;
     /* width: 100%; */
     border-radius: 50px;
     margin-right: 20px;
+    cursor: pointer;
 }
 
 .notification{
     height: 30px;
     width: 100%;
-    margin-left: 22px;
-    margin-right: 22px;
+    /* margin-left: 22px; */
+    /* margin-right: 22px; */
+}
+
+
+
+
+.no-notifications{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    margin-left: 28px; 
+     margin-right: 28px; 
+     cursor: pointer;
+     
+
+}
+
+.no-of-notifications{
+    color: white;
+    background-color: red;
+    border-radius: 40px;
+    padding: 2px;
+    position: absolute;
+    top: -4px;
+    right: -2px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+
+.notificationtooltip{
+    position: absolute;
+    right: -50px;
+    bottom: -28px;
+    background-color: grey;
+    color: white;
+    border-radius: 2px;
+    padding: 5px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    font-size: 12px;
+}
+
+.no-notifications:hover .notificationtooltip{
+    opacity: 1;
+}
+
+
+
+.sidebar{
+    background-color: white; /* Or any color you want */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top:40px;
+
+    /* height: 40px; */
+    /* padding: 100px; */
+    z-index: 100;
+
+    
+
+    
+
+}
+
+.sidebar{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* justify-content: space-between; */
+
+    gap: 8px;
+}
+
+.sidbar-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers items horizontally */
+    gap: 1px; /* Adds spacing between child elements */
+    padding: 20px; /* Adds inner spacing */
+    
+
+}
+
+.sidbar-content img{
+    height: 25px;
+    
+}
+
+.sidbar-content p{
+
+    font-weight: bold;
+    font-size: 10px;
+    margin-top: 4px;
+}
+
+
+.sidbar-content:hover{
+    background-color: rgba(217, 217, 217, 0.638);
+    cursor: pointer;
 }
 
 
@@ -197,7 +383,7 @@ height: 25px;
     display: grid;
     /* grid-template-columns:1fr 1fr 1fr; */
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-
+    
     row-gap: 18px;
     column-gap: 18px;
 }
@@ -208,6 +394,28 @@ width: 100%;
 border-radius: 10px;
 cursor: pointer;
 }
+
+
+.grid-img{
+    position: relative;
+}
+
+
+.video-time{
+    padding: 5px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.57);
+    position: absolute;
+    right: 10px;
+    bottom: 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+
+
+
 
 
 
@@ -221,7 +429,7 @@ cursor: pointer;
 
 
 .profile-picture{
-    width: 30px;
+    width: 38px;
     border-radius: 50px;
     cursor: pointer;
 
