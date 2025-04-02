@@ -14,10 +14,10 @@ A YouTube homepage clone built using **HTML & CSS (Flexbox, Grid, Positioning)**
 - 🏗 **HTML5**  
 - 🎨 **CSS3 (Flexbox, Grid, Positioning)**  
 
-## 🚀 How to Run  
-1️⃣ Clone the repository:  
+## Clone the Repository  
+```sh
+git clone https://github.com/Rohan-Naroni/Youtube.git
 
-   git clone https://github.com/rohan-naroni/Youtube-Front-End-.git
 
 
 # CLick On The Link To See Output :
