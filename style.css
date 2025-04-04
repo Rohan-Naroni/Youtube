@@ -351,7 +351,7 @@ cursor: pointer;
     flex-direction: column;
     align-items: center; /* Centers items horizontally */
     gap: 1px; /* Adds spacing between child elements */
-    padding: 15px; /* Adds inner spacing */
+    padding: 17px; /* Adds inner spacing */
     
 
 }
