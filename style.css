@@ -322,7 +322,6 @@ cursor: pointer;
 
 .sidebar{
     background-color: white; /* Or any color you want */
-    position: fixed;
     bottom: 0;
     left: 0;
     top:40px;
@@ -339,19 +338,25 @@ cursor: pointer;
 
 .sidebar{
     display: flex;
-    justify-content: center;
     flex-direction: column;
     /* justify-content: space-between; */
+    /* justify-content: center; */
+    position: fixed;
 
-    gap: 8px;
+    gap: 18px;
+    padding-top: 53px;
 }
 
 .sidbar-content{
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers items horizontally */
+    align-items: center; 
     gap: 1px; /* Adds spacing between child elements */
-    padding: 17px; /* Adds inner spacing */
+    /* margin-top: 50px; */
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    padding-bottom: 15px;
     
 
 }
